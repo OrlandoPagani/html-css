@@ -1,0 +1,16 @@
+body {
+    background-color: lightskyblue;
+    color: chocolate;
+    font-size: 12pt;
+    font-family: Arial;
+}
+
+h1 {
+    color: brown;
+}
+
+p {
+    color: rgb(8, 0, 114);
+    text-decoration: none;
+    text-align: justify;
+}

@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to left, #AC83E6, #813DE0);
+}
+
+main {
+    width: 600px;
+    padding: 10px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #552795;
+}
+
+h1 {    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    color: #381A61;
+    text-shadow: 1px 1px 2px #200f38;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    color: #813DE0;
+}
+
+p {
+    font-family: 'Dancing Script', cursive;
+    text-align: justify;
+}
