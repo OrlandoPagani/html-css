@@ -19,20 +19,42 @@
         border: 3px solid darkcyan;
         border-collapse: collapse;
         background-color: rgba(255, 255, 255, 0.5);
+        position: relative;
     }
     
     td, th {
         width: 200px;
         border: 1px solid black;
-        text-align: center;
+        text-align: left;
         padding: 10px;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     }
-
-    thead, tfoot {
+    
+    caption {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
         background-color: gray;
         color: white;
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    thead, tfoot {
+        background-color: rgb(169, 169, 169);
+        color: white;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+    
+    thead > tr > th {
+        position: sticky;
+        background-color: rgb(169, 169, 169);
+        top: -2px;        
+    }
+
+    tbody > tr:nth-child(odd) {
+        background-color: rgba(211, 211, 211, 0.4);
     }
 
     td.numero {
@@ -45,6 +67,7 @@
     <!--
         ANATOMIA DE TABELAS GRANDES
         TABEL
+            CAPTION
             THEAD
                 TR, TH, TD
             TBODY
@@ -53,11 +76,12 @@
                 TR, TH, TD
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
-                <th>% População Total</th>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
+                <th scope="col">% População Total</th>
             </tr>
         </thead>
         <tbody>
@@ -199,7 +223,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="numero"><strong>213.317.639</strong></td>
                 <td class="numero"><strong>100%</strong></td>
             </tr>
