@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form action="cadastro.php" method="get">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="isexm" value="M"> <label for="isexm">Masculino</label> <br>
+            <input type="radio" name="sexo" id="isexf" value="F"> <label for="isexf">Feminino</label> <br>
+            <input type="radio" name="sexo" id="isexx" value="X"> <label for="isexx">Prefiro não informar</label>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <input type="checkbox" name="basquete" id="ibasquete"> <label for="ibasquete">Basquete</label> <br>
+            <input type="checkbox" name="futebol" id="ifutebol"> <label for="ifutebol">Futebol</label> <br>
+            <input type="checkbox" name="natacao" id="inatacao"> <label for="inatacao">Natação</label> <br>
+            <input type="checkbox" name="tenis" id="itenis"> <label for="itenis">Tênis</label> <br>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <h2>Anotações</h2>
+    <h3>Inputs do tipo <strong>radio:</strong></h3>
+    <ul>
+        <li>Agrupar dentro de um fieldset para melhor organização</li>
+        <li>Para que seja possível selecionar apenas uma opção, utilizar o mesmo valor no atributo 'name'</li>
+        <li>Utilizar valores diferentes no atributo id</li>
+        <li>Adicionar o atributo value em cada opção, dessa forma, o valor dentro do atributo 'value' será transminido para o form</li>
+        <li>Envelopar cada opção com uma label, carregando o mesmo id no atributo 'for' para que quando clicado em um texto, seja selecionada a opção também</li>
+    </ul>
+    <h3>Inputs do tipo <strong>checkbox:</strong></h3>
+    <ul>
+        <li>Utilizar o atributo type='checkbox'</li>
+        <li>Utilizar nomes e ids diferentes para cada opção</li>
+        <li>Envelopar cada opção com uma label, carregando o mesmo id no atributo 'for' para que quando clicado em um texto, seja selecionada a opção também.</li>
+    </ul>
+</body>
+</html>
