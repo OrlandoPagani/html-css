@@ -48,3 +48,7 @@ article {
     display: block;
     margin: auto;
 }
+
+p {
+    padding: 10px 0px;
+}
