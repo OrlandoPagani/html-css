@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/* Typical Device Breakpoints 
+-----------------------------
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+/* Uma vez que o site foi desenvolvido com mobile first, não há necessidade de modificar as css para telas inferiores a 768px */
+
+@media print { /*IMPRESSORA*/
+
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        background-image: url(../imagens/back-print.jpg); /* Desnecessário, impressora não imprime background */
+    }
+
+    main {
+        border: 2px solid black;
+        width: 90vw;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+    
+    img#phone { display: none; }
+    img#tab { display: none; }
+    img#print { display: block; }
+    img#desk { display: none; }
+    img#tv { display: none; }
+
+    main::after {
+        content: "Esta impressão foi feita pelo site www.cursoemvideo.com e replicada por Orlando Pagani";
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) { /*TABLET*/
+
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone { display: none; }
+    img#tab { display: block; }
+    img#print { display: none; }
+    img#desk { display: none; }
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) { /*DESKTOP*/
+
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#phone { display: none; }
+    img#tab { display: none; }
+    img#print { display: none; }
+    img#desk { display: block; }
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 1200px) { /*TELA GRANDE*/
+
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    img#phone { display: none; }
+    img#tab { display: none; }
+    img#print { display: none; }
+    img#desk { display: none; }
+    img#tv { display: block; }
+}
